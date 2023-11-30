@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans&family=Lato:wght@300;400&family=Roboto:wght@500&family=Ubuntu&display=swap');
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -6,7 +8,7 @@
 
 :root {
     --main-green: #0C751E;
-    --main-blue: #022036;
+    --main-dark-blue: #022036;
     --main-white: #f8f7f7;
 }
 
@@ -17,7 +19,8 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    box-shadow: 10px 0 0 0 0;
+    box-shadow: 0px -2px 10px;
+    margin-bottom: 5rem;
 }
 
 .header__a-logo {
@@ -26,14 +29,14 @@ header {
     margin-left: 1rem;
 }
 
-.header__ul {
+.header__list {
     list-style: none;
     display: flex;
     align-items: center;
     margin-right: 1rem;
 }
 
-.header__ul-listitem {
+.header__item {
     height: 4rem;
     width: 4rem;
     display: flex;
@@ -44,4 +47,73 @@ header {
 
 body {
     background-color: var(--main-white);
+}
+
+.wrapper {
+    max-width: 1000px;
+    margin: auto;
+}
+
+.card {
+    background: white;
+    margin-bottom: 2rem;
+}
+
+.card__container--big-card {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.card-img {
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+
+.card__img--big-card {
+    background-image: url(/assets/photos/01-day.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.card__info-section--big-card {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-left: 1rem;
+    gap: 3rem;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+}
+
+.card__title--welcome {
+    font-size: xx-large;
+}
+
+.card__title {
+    font-family: 'Ubuntu', sans-serif;;
+    font-weight: 700;
+}
+
+.card__text {
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.card__button {
+    font-family: 'Ubuntu', sans-serif;
+    text-decoration: none;
+    background-color: var(--main-green);
+    padding: 1rem 1.5rem;
+    color: var(--main-white);
+    border-radius:.5rem;
+}
+
+.card__container--small-card {
+    display: flex;
+    flex-direction: column;
+}
+
+.card__img--small-card {
+    background-image: url(/assets/photos/02-day.jpg);
 }
