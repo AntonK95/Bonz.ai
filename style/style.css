@@ -10,6 +10,7 @@
     --main-green: #0C751E;
     --main-dark-blue: #022036;
     --main-white: #f8f7f7;
+    --hover-green: #109226;
 }
 
 header {
@@ -49,6 +50,8 @@ body {
     background-color: var(--main-white);
 }
 
+/* Styling for landing page */
+
 .wrapper {
     max-width: 1000px;
     margin: auto;
@@ -62,19 +65,22 @@ body {
 .card__container--big-card {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    transition: all .2s ease-in-out;
 }
 
-.card-img {
-    background-size: cover;
-    background-repeat: no-repeat;
+.card__container--big-card:hover {
+    box-shadow: 5px 5px 22px -8px;
 }
-
 
 .card__img--big-card {
     background-image: url(/assets/photos/01-day.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
+    transition: all .5s ease-in-out;
+}
+.card__img--big-card:hover {
+    background-image: url(/assets/photos/01-night.jpg);
 }
 
 .card__info-section--big-card {
@@ -94,10 +100,13 @@ body {
 .card__title {
     font-family: 'Ubuntu', sans-serif;;
     font-weight: 700;
+    margin-top: .5rem;
+    margin-bottom: .5rem;
 }
 
 .card__text {
     font-family: 'Ubuntu', sans-serif;
+    margin: .5rem;
 }
 
 .card__button {
@@ -107,13 +116,119 @@ body {
     padding: 1rem 1.5rem;
     color: var(--main-white);
     border-radius:.5rem;
+    align-self: flex-end;
+    margin-right: 1.5rem;
+    margin-bottom: 1.5rem;
+    transition: all .2s ease-in;
+}
+
+.card__button--big-card{
+    align-self: flex-start;
+    margin-right: 0;
+    margin-bottom: 0;
+}
+
+.card__button:hover {
+    background-color: var(--hover-green);
+}
+
+.side-to-side{
+    display: flex;
+    gap: 1rem;
 }
 
 .card__container--small-card {
     display: flex;
     flex-direction: column;
+    text-align: center;
+    transition: all .2s ease-in-out;
 }
 
-.card__img--small-card {
+.card__container--small-card:hover {
+    box-shadow: 5px 5px 22px -8px;
+}
+/* Fick inte detta till att styra storleken på bilden..
+.card-img {
+    height: 300px;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+*/
+.card__img--small-card-left {
     background-image: url(/assets/photos/02-day.jpg);
+    height: 300px;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    transition: all .5s ease-in-out;
+}
+
+.card__img--small-card-left:hover {
+    background-image: url(/assets/photos/02-night.jpg);
+}
+
+.card__img--small-card-right {
+    background-image: url(/assets/photos/03-day.jpg);
+    height: 300px;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    transition: all .5s ease-in-out;
+}
+.card__img--small-card-right:hover {
+    background-image: url(/assets/photos/03-night.jpg);
+}
+
+@media screen and (max-width: 1020px) {
+    .wrapper {
+        max-width: 80%;
+    }
+
+    
+}
+
+@media screen and (max-width: 850px) {
+    header {
+        height: 4rem;
+    }
+
+    .header__a-logo {
+        height: 3rem;
+    }
+
+    .header__item {
+        height: 3rem;
+        width: 3rem;
+    }
+
+    .card__container--big-card {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    .card__img--big-card {
+        height: 300px;
+        width: 100%;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+    
+    .side-to-side {
+        flex-direction: column;
+    }
+
+    .card__button {
+        align-self: flex-start;
+        margin-left: 1.5rem;
+        margin-top: 1rem;
+    }
+
+    .card__button--big-card {
+        margin: 0;
+    }
 }
