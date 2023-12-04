@@ -75,7 +75,7 @@ body {
     background-color: var(--main-white);
 }
 
-/* Styling for landing page */
+/* Styling landing page */
 
 .wrapper {
     max-width: 1000px;
@@ -83,17 +83,20 @@ body {
 }
 
 .card {
-    background: var(--white-background);
     margin-bottom: 2rem;
 }
 
 .card__container--big-card {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    transition: all .2s ease-in-out;
 }
 
-.card__container--big-card:hover {
+.card__container {
+    background-color: var(--white-background);
+    transition: all .6s ease-in-out;
+}
+
+.card__container:hover {
     box-shadow: 5px 5px 22px -8px;
 }
 
@@ -166,21 +169,8 @@ body {
     display: flex;
     flex-direction: column;
     text-align: center;
-    transition: all .2s ease-in-out;
 }
 
-.card__container--small-card:hover {
-    box-shadow: 5px 5px 22px -8px;
-}
-/* Fick inte detta till att styra storleken på bilden..
-.card-img {
-    height: 300px;
-    width: 100%;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-}
-*/
 .card__img--small-card-left {
     background-image: url(/assets/photos/02-day.jpg);
     height: 300px;
@@ -208,11 +198,14 @@ body {
     background-image: url(/assets/photos/03-night.jpg);
 }
 
+/* Styling footer */
+
 footer {
     font-family: 'Ubuntu', sans-serif;
     display: flex;
     justify-content: space-evenly;
     background-color: var(--white-background);
+    margin-top: 3rem;
 }
 
 .footer__adress,
@@ -248,12 +241,109 @@ footer {
     cursor: pointer;
 }
 
+/* Styling boka.html */
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+}
+
+.card__container--grid {
+    display: flex;
+    flex-direction: column;
+}
+
+.cards__img {
+    height: 300px;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    transition: all .5s ease-in-out;
+}
+
+.card__img--01 {
+    background-image: url(../assets/photos/01-day.jpg);
+}
+.card__img--01:hover {
+    background-image: url(../assets/photos/01-night.jpg);
+}
+
+.card__img--02 {
+    background-image: url(../assets/photos/02-day.jpg);
+}
+.card__img--02:hover {
+    background-image: url(../assets/photos/02-night.jpg);
+}
+
+.card__img--03 {
+    background-image: url(../assets/photos/03-day.jpg);
+}
+.card__img--03:hover {
+    background-image: url(../assets/photos/03-night.jpg);
+}
+
+.card__img--04 {
+    background-image: url(../assets/photos/04-day.jpg);
+}
+.card__img--04:hover {
+    background-image: url(../assets/photos/04-night.jpg);
+}
+
+.card__img--05 {
+    background-image: url(../assets/photos/05-day.jpg);
+}
+.card__img--05:hover {
+    background-image: url(../assets/photos/05-night.jpg);
+}
+
+.card__img--06 {
+    background-image: url(../assets/photos/06-day.jpg);
+}
+.card__img--06:hover {
+    background-image: url(../assets/photos/06-night.jpg);
+}
+
+.card__img--07 {
+    background-image: url(../assets/photos/07-day.jpg);
+}
+.card__img--07:hover {
+    background-image: url(../assets/photos/07-night.jpg);
+}
+
+.card__img--08 {
+    background-image: url(../assets/photos/08-day.jpg);
+}
+.card__img--08:hover {
+    background-image: url(../assets/photos/08-night.jpg);
+}
+
+.card__img--09 {
+    background-image: url(../assets/photos/09-day.jpg);
+}
+.card__img--09:hover {
+    background-image: url(../assets/photos/09-night.jpg);
+}
+
+.cards__title {
+    margin: 1rem;
+}
+
+.cards__info {
+    margin: .5rem 1rem;
+}
+
+
 @media screen and (max-width: 1020px) {
     .wrapper {
         max-width: 80%;
     }
 
-    
+    .cards {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 
 @media screen and (max-width: 850px) {
@@ -297,7 +387,18 @@ footer {
         margin: 0;
     }
 
+    .card__button--grid-cards {
+        margin-bottom: 1rem; 
+        align-self: center;
+        padding: 1rem 3rem;
+    }
+
     footer {
         flex-wrap: wrap;
+    }
+
+    .cards {
+        display: flex;
+        flex-direction: column;
     }
 }
