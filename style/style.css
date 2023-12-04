@@ -11,6 +11,7 @@
     --main-dark-blue: #022036;
     --main-white: #f8f7f7;
     --hover-green: #109226;
+    --white-background: #ffffffe6;
 }
 
 /* Custom scrollbar */
@@ -35,6 +36,8 @@
     background: var(--hover-green); 
   }
 
+
+/* Styling header */  
 header {
     height: 5rem;
     width: 100%;
@@ -80,7 +83,7 @@ body {
 }
 
 .card {
-    background: white;
+    background: var(--white-background);
     margin-bottom: 2rem;
 }
 
@@ -120,7 +123,7 @@ body {
 }
 
 .card__title {
-    font-family: 'Ubuntu', sans-serif;;
+    font-family: 'Ubuntu', sans-serif;
     font-weight: 700;
     margin-top: .5rem;
     margin-bottom: .5rem;
@@ -205,6 +208,46 @@ body {
     background-image: url(/assets/photos/03-night.jpg);
 }
 
+footer {
+    font-family: 'Ubuntu', sans-serif;
+    display: flex;
+    justify-content: space-evenly;
+    background-color: var(--white-background);
+}
+
+.footer__adress,
+.footer__contact,
+.footer__social-media {
+    list-style: none;
+    margin: 1rem;
+    gap: .5rem;
+}
+
+.footer__adress--title,
+.footer__contact--title,
+.footer__social-media--title {
+    font-weight: 800;
+    font-size: medium;
+    margin-bottom: .5rem;
+}
+
+.footer__adress--items,
+.footer__contact--items {
+    margin: .3rem auto;
+}
+
+.footer__icon-flexbox {
+    display: flex;
+    gap: .5rem;
+    margin: 1rem auto;
+}
+
+.footer__icons {
+    height: 45px;
+    display: flex;
+    cursor: pointer;
+}
+
 @media screen and (max-width: 1020px) {
     .wrapper {
         max-width: 80%;
@@ -252,5 +295,9 @@ body {
 
     .card__button--big-card {
         margin: 0;
+    }
+
+    footer {
+        flex-wrap: wrap;
     }
 }
