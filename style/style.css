@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Fira+Sans&family=Lato:wght@300;400&family=Roboto:wght@500&family=Ubuntu&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans&family=Lato:wght@300;400&family=Maven+Pro&family=Roboto:wght@500&family=Ubuntu&display=swap');
 
 * {
     box-sizing: border-box;
@@ -12,6 +13,7 @@
     --main-white: #f8f7f7;
     --hover-green: #109226;
     --white-background: #ffffffe6;
+    --fonts: 'Maven Pro', sans-serif;
 }
 
 /* Custom scrollbar */
@@ -115,10 +117,8 @@ body {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    padding-left: 1rem;
+    margin: 1rem;
     gap: 3rem;
-    padding-top: 1.5rem;
-    padding-bottom: 1.5rem;
 }
 
 .card__title--welcome {
@@ -126,19 +126,16 @@ body {
 }
 
 .card__title {
-    font-family: 'Ubuntu', sans-serif;
+    font-family: var(--fonts);
     font-weight: 700;
-    margin-top: .5rem;
-    margin-bottom: .5rem;
 }
 
 .card__text {
-    font-family: 'Ubuntu', sans-serif;
-    margin: .5rem;
+    font-family: var(--fonts);
 }
 
 .card__button {
-    font-family: 'Ubuntu', sans-serif;
+    font-family: var(--fonts);
     text-decoration: none;
     background-color: var(--main-green);
     padding: 1rem 1.5rem;
@@ -146,8 +143,6 @@ body {
     border-radius:.5rem;
     align-self: flex-end;
     margin-top: 1.5rem;
-    margin-right: 1.5rem;
-    margin-bottom: 1.5rem;
     transition: all .2s ease-in;
 }
 
@@ -199,10 +194,17 @@ body {
     background-image: url(/assets/photos/03-night.jpg);
 }
 
+.card__inner-small-card {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin: 1rem;
+}
+
 /* Styling footer */
 
 footer {
-    font-family: 'Ubuntu', sans-serif;
+    font-family: var(--fonts);
     display: flex;
     justify-content: space-evenly;
     background-color: var(--white-background);
@@ -327,12 +329,22 @@ footer {
     background-image: url(../assets/photos/09-night.jpg);
 }
 
+.cards__inner {
+    display: flex;
+    flex-direction: column;
+    margin: .5rem;
+}
+
 .cards__title {
     margin: 1rem;
+    font-size: var(--fonts);
+    font-size: larger;
+    font-weight: 600;
 }
 
 .cards__info {
     margin: .5rem 1rem;
+    font-family: var(--fonts);
 }
 
 
