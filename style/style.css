@@ -103,6 +103,9 @@ header {
 
 body {
     background-color: var(--main-white);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 /* Styling landing page */
@@ -110,6 +113,7 @@ body {
 .wrapper {
     max-width: 1000px;
     margin: auto;
+    margin-bottom: 5rem;
 }
 
 .card {
@@ -123,6 +127,7 @@ body {
 
 .card__container {
     background-color: var(--white-background);
+    box-shadow: 0px 0px 4px -2px;
     transition: all .6s ease-in-out;
 }
 
@@ -235,7 +240,8 @@ footer {
     display: flex;
     justify-content: space-evenly;
     background-color: var(--white-background);
-    margin-top: 3rem;
+    margin-top: auto;
+    box-shadow: 0px 0px 20px -12px;
 }
 
 .footer__adress,
@@ -282,6 +288,16 @@ footer {
 .card__container--grid {
     display: flex;
     flex-direction: column;
+}
+
+.cards__container {
+    background-color: var(--white-background);
+    box-shadow: 0px 0px 4px -2px;
+    transition: all .6s ease-in-out;
+}
+
+.cards__container:hover {
+    box-shadow: 5px 5px 22px -8px;
 }
 
 .cards__img {
@@ -376,6 +392,39 @@ footer {
 }
 
 
+/* Styling for facilities */
+
+.information__card {
+    background-color: var(--white-background);
+    box-shadow: 0px 0px 4px -2px;
+    padding: 2.5rem;
+    font-family: var(--fonts);
+}
+
+.information__inner {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 1.5rem;
+}
+
+.information__title {
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 2rem;
+}
+
+.informaition__listitem--included {
+    font-weight: 600;
+}
+
+.information__listitem--to-expect {
+    font-weight: 600;
+}
+
+.information__list {
+    list-style: none;
+}
+
 @media screen and (max-width: 1020px) {
     .wrapper {
         max-width: 80%;
@@ -453,6 +502,12 @@ footer {
 
     .header__input {
         display: none;
+    }
+
+    .information__inner {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
     }
 
 }
