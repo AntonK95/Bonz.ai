@@ -111,7 +111,7 @@ body {
     background-image: url(/assets/photos/01-night.jpg);
 }
 
-.card__info-section--big-card {
+.card__inner {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
