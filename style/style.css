@@ -73,6 +73,34 @@ header {
     cursor: pointer;
 }
 
+.header__input {
+    padding: 1rem 2rem;
+    border-radius: .3rem;
+    border: solid 1px grey;
+    font-family: var(--fonts);
+    font-weight: 600;
+}
+
+
+/* Styling search container */
+
+.search-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: .5rem 1.5rem;
+    margin-bottom: 5rem;
+}
+
+.search__input {
+    font-size: larger;
+    border-radius: .5rem;
+    padding: .5rem;
+}
+
+.card__button--search {
+    text-align: center;
+}
+
 body {
     background-color: var(--main-white);
 }
@@ -142,7 +170,6 @@ body {
     color: var(--main-white);
     border-radius:.5rem;
     align-self: flex-end;
-    margin-top: 1.5rem;
     transition: all .2s ease-in;
 }
 
@@ -332,7 +359,8 @@ footer {
 .cards__inner {
     display: flex;
     flex-direction: column;
-    margin: .5rem;
+    margin: 1rem;
+    gap: .5rem;
 }
 
 .cards__title {
@@ -351,6 +379,10 @@ footer {
 @media screen and (max-width: 1020px) {
     .wrapper {
         max-width: 80%;
+    }
+
+    .search-container {
+        grid-template-columns: repeat(2, 1fr);
     }
 
     .cards {
@@ -373,9 +405,14 @@ footer {
         width: 3rem;
     }
 
+    .search-container {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
     .card__container--big-card {
         display: flex;
         flex-direction: column-reverse;
+        text-align: center;
     }
 
     .card__img--big-card {
@@ -385,6 +422,14 @@ footer {
         background-size: cover;
         background-position: center;
     }
+
+    .card__title--welcome {
+        text-align: center;
+    }
+
+    .card__inner {
+        text-align: center;
+    }
     
     .side-to-side {
         flex-direction: column;
@@ -392,13 +437,7 @@ footer {
 
     .card__button {
         align-self: center;
-        margin-left: 1.5rem;
-        margin-top: 1rem;
         padding: 1rem 4rem;
-    }
-
-    .card__button--big-card {
-        margin: 0;
     }
 
     footer {
@@ -409,4 +448,11 @@ footer {
         display: flex;
         flex-direction: column;
     }
+}
+@media screen and (max-width: 650px) {
+
+    .header__input {
+        display: none;
+    }
+
 }

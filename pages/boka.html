@@ -11,7 +11,10 @@
 <header>
     <a href="../index.html"><img src="../assets/logo/bonz 2.png" alt="bonz.ai logo" class="header__a-logo"></a>
     <ul class="header__list">
-        <li class="header__item header__item--search"><img src="../assets/icons/search.svg" alt="search"></li>
+        <section class="header__search-container">
+              <input type="text" placeholder="Sök..." name="search" class="header__input">
+          </section>
+        <li class="header__item header__item--search"><img src="../assets/icons/search.svg" alt="search"></li> 
         <li class="header__item header__item--news"><img src="../assets/icons/news.svg" alt="news"></li>
         <li class="header__item header__item--hamburger"><img src="../assets/icons/hamburger.svg" alt="menu"></li>
     </ul>
@@ -20,6 +23,14 @@
 
 <body>
     <div class="wrapper">
+
+        <section class="search-container">
+            <input type="date" placeholder="Välj datum" class="search__input search__input--date-picker">
+            <input type="number" placeholder="Antal personer" class="search__input search__input--persons">
+            <input type="text" placeholder="Välj destination" class="search__input search__input--destination">
+            <a href="#" class="card__button card__button--search">Sök boende</a>
+        </section>
+
         <section class="cards">
             <section class="card__container card__container--grid">
                 <figure class="cards__img card__img--01"></figure>
