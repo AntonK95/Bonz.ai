@@ -163,6 +163,10 @@ body {
     font-weight: 700;
 }
 
+.card__title--small-card {
+    align-self: center;
+}
+
 .card__text {
     font-family: var(--fonts);
 }
@@ -226,9 +230,10 @@ body {
     background-image: url(/assets/photos/03-night.jpg);
 }
 
-.card__inner-small-card {
+.card__inner--small-card {
     display: flex;
     flex-direction: column;
+    align-self: center;
     gap: 1rem;
     margin: 1rem;
 }
